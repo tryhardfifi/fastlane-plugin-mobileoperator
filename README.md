@@ -1,4 +1,4 @@
-# mobileoperator plugin
+# Mobile Operator Fastlane plugin
 
 [![fastlane Plugin Badge](https://rawcdn.githack.com/fastlane/fastlane/master/fastlane/assets/plugin-badge.svg)](https://rubygems.org/gems/fastlane-plugin-mobileoperator)
 
