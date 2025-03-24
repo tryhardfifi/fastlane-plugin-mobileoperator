@@ -2,13 +2,30 @@
 
 [![fastlane Plugin Badge](https://rawcdn.githack.com/fastlane/fastlane/master/fastlane/assets/plugin-badge.svg)](https://rubygems.org/gems/fastlane-plugin-mobileoperator)
 
-## Getting Started
-
-This project is a [_fastlane_](https://github.com/fastlane/fastlane) plugin. To get started with `fastlane-plugin-mobileoperator`, add it to your project by running:
+## 🚀 Getting Started
+This project is a fastlane plugin. To get started with fastlane-plugin-mobileoperator, add it to your project by running:
 
 ```bash
 fastlane add_plugin mobileoperator
 ```
+
+Then, you can use it in your Fastfile like this:
+```ruby
+lane :upload_to_mobile_operator do
+  gym(
+    scheme: "benchmarkapp",        # Change this to your scheme
+    export_method: "development"
+  )
+
+  upload_to_mobileoperator(
+    file_path: lane_context[SharedValues::IPA_OUTPUT_PATH],
+    api_key: "my-secret-api-key"
+  )
+end
+```
+
+This will build your app and upload the .ipa to your custom MobileOperator storage.
+
 
 ## About mobileoperator
 
